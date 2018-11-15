@@ -81,7 +81,7 @@ class _PhotoMainPageState extends State<PhotoMainPage>
         child: Scaffold(
           appBar: AppBar(
             leading: IconButton(
-              icon: Icon(Icons.close),
+              icon: Icon(Icons.close,color: Colors.black,),
               onPressed: _cancel,
             ),
             title: Text(
