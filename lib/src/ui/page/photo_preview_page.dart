@@ -110,7 +110,10 @@ class _PhotoPreviewPageState extends State<PhotoPreviewPage> {
             initialData: widget.initIndex,
             builder: (ctx, snap) => Text(
                   "${snap.data + 1}/${widget.list.length}",
-                  style: textStyle
+                  style: TextStyle(
+                          color: options.textColor,
+                          fontSize: 14.0,
+                        ),
                 ),
           ),
           actions: <Widget>[
