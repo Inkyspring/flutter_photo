@@ -107,7 +107,7 @@ class _PhotoPreviewPageState extends State<PhotoPreviewPage> {
           backgroundColor: config.options.themeColor,
           leading: IconButton(
               icon: Icon(Icons.keyboard_arrow_left,color:options.textColor),
-              onPressed: Navigator.pop(context),
+              onPressed: ()=>Navigator.pop(context),
             ),
           title: StreamBuilder(
             stream: pageStream,
