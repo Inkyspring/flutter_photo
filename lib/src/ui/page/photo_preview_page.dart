@@ -109,7 +109,7 @@ class _PhotoPreviewPageState extends State<PhotoPreviewPage> {
             stream: pageStream,
             initialData: widget.initIndex,
             builder: (ctx, snap) => Text(
-                  "${snap.data + 1}/${widget.list.length}",style: const TextStyle(color: Colors.black,)
+                  "${snap.data + 1}/${widget.list.length}",style: textStyle)
                 ),
           ),
           actions: <Widget>[
