@@ -85,7 +85,7 @@ class _PhotoMainPageState extends State<PhotoMainPage>
               onPressed: _cancel,
             ),
             title: Text(
-              i18nProvider.getTitleText(options),
+              i18nProvider.getTitleText(options),style: const TextStyle(color: Colors.black,)
             ),
             actions: <Widget>[
               FlatButton(
