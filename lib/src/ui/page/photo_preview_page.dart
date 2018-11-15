@@ -106,7 +106,7 @@ class _PhotoPreviewPageState extends State<PhotoPreviewPage> {
         appBar: AppBar(
           backgroundColor: config.options.themeColor,
           leading: IconButton(
-              icon: Icon(Icons.keyboard_arrow_left),
+              icon: Icon(Icons.keyboard_arrow_left,color:options.textColor),
               onPressed: Navigator.pop(context),
             ),
           title: StreamBuilder(
