@@ -19,11 +19,11 @@ class _NotPermissionDialogState extends State<NotPermissionDialog> {
       actions: <Widget>[
         FlatButton(
           onPressed: _onCancel,
-          child: Text(provider.cancelText),
+          child: Text(provider.cancelText,style: TextStyle(color: provider.cancelColor, fontSize: provider.cancelFontSize)),
         ),
         FlatButton(
           onPressed: _onSure,
-          child: Text(provider.sureText),
+          child: Text(provider.sureText,style: TextStyle(color: provider.sureColor, fontSize: provider.sureFontSize)),
         ),
       ],
     );
