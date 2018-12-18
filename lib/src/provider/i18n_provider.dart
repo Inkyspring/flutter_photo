@@ -158,7 +158,11 @@ class I18NPermissionProvider {
   final String cancelText;
   final Color titleColor;
   final double titleFontSize;
+  final Color sureColor;
+  final double sureFontSize;
+  final Color cancelColor;
+  final double cancelFontSize;
 
   const I18NPermissionProvider(
-      {this.titleText,this.titleColor,this.titleFontSize,this.sureText, this.cancelText});
+      {this.titleText,this.titleColor,this.titleFontSize,this.sureText,this.sureColor,this.sureFontSize,this.cancelText,this.cancelColor,this.cancelFontSize});
 }
