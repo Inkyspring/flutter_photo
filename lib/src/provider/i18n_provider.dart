@@ -1,5 +1,6 @@
 import 'package:photo/src/entity/options.dart';
 import 'package:photo/src/provider/selected_provider.dart';
+import 'dart:ui';
 
 abstract class I18nProvider {
   const I18nProvider._();
