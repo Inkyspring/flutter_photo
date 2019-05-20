@@ -23,6 +23,7 @@ class Options {
   final int thumbSize;
 
   final SortDelegate sortDelegate;
+  final TextStyle selectedTextStyle;
 
   final CheckBoxBuilderDelegate checkBoxBuilderDelegate;
 
@@ -36,6 +37,7 @@ class Options {
     this.themeColor,
     this.dividerColor,
     this.textColor,
+    this.selectedTextStyle,
     this.disableColor,
     this.thumbSize,
     this.sortDelegate,
