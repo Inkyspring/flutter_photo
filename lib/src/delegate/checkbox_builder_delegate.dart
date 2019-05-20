@@ -16,10 +16,12 @@ abstract class CheckBoxBuilderDelegate {
 class DefaultCheckBoxBuilderDelegate extends CheckBoxBuilderDelegate {
   Color activeColor;
   Color unselectedColor;
+  double textBoxWidth;
 
   DefaultCheckBoxBuilderDelegate({
     this.activeColor = Colors.white,
     this.unselectedColor = Colors.white,
+    this.textBoxWidth = 300
   });
 
   @override
@@ -37,10 +39,13 @@ class DefaultCheckBoxBuilderDelegate extends CheckBoxBuilderDelegate {
         onChanged: (bool check) {},
         activeColor: activeColor,
         checkColor: Colors.red,
-        title: Text(
-          i18nProvider.getSelectedOptionsText(options),
-          textAlign: TextAlign.end,
-          style: TextStyle(color: options.textColor),
+        title: Container(
+          width: textBoxWidth,
+          child: Text(
+            i18nProvider.getSelectedOptionsText(options),
+            textAlign: TextAlign.end,
+            style: TextStyle(color: options.textColor),
+          ),
         ),
       ),
     );
