@@ -26,6 +26,8 @@ abstract class I18nProvider {
   static const I18nProvider chinese = CNProvider();
 
   static const I18nProvider english = ENProvider();
+
+  static const I18nProvider japanese = JAProvider();
 }
 
 class CNProvider extends I18nProvider {
@@ -107,11 +109,63 @@ class ENProvider extends I18nProvider {
   }
 
   @override
+  String loadingText() {
+    return 'loading...';
+  }
+
+  @override
   I18NPermissionProvider getNotPermissionText(Options options) {
     return I18NPermissionProvider(
         cancelText: "cancel",
         sureText: "allow",
         titleText: "No permission to access gallery");
+  }
+}
+
+class JAProvider extends I18nProvider {
+  const JAProvider() : super._();
+
+  @override
+  String getTitleText(Options options) {
+    return "選択";
+  }
+
+  @override
+  String getPreviewText(Options options, SelectedProvider selectedProvider) {
+    return "プレビュー(${selectedProvider.selectedCount})";
+  }
+
+  @override
+  String getSureText(Options options, int currentCount) {
+    return "確認($currentCount/${options.maxSelected})";
+  }
+
+  @override
+  String getSelectedOptionsText(Options options) {
+    return "選択した";
+  }
+
+  @override
+  String getMaxTipText(Options options) {
+    return "写真は ${options.maxSelected} 枚まで選んでください";
+  }
+
+  @override
+  String getAllGalleryText(Options options) {
+    return "全部";
+  }
+
+  @override
+  String loadingText() {
+    return 'loading...';
+  }
+
+  @override
+  I18NPermissionProvider getNotPermissionText(Options options) {
+    return I18NPermissionProvider(
+        cancelText: "キャンセル",
+        sureText: "セットへ",
+        titleText: "アルバムにアクセスする権限はありません");
   }
 }
 
